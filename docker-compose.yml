@@ -1,0 +1,45 @@
+version: "3.8"
+
+services:
+
+  # PART E — 5 IDENTICAL CONTAINERS
+  identical:
+    image: project2-nginx
+    deploy:
+      replicas: 5
+
+  # PART F — 5 UNIQUE CONTAINERS
+  service1:
+    image: project2-nginx
+    ports:
+      - "8081:80"
+    volumes:
+      - ./site1:/usr/share/nginx/html
+
+  service2:
+    image: project2-nginx
+    ports:
+      - "8082:80"
+    volumes:
+      - ./site2:/usr/share/nginx/html
+
+  service3:
+    image: project2-nginx
+    ports:
+      - "8083:80"
+    volumes:
+      - ./site3:/usr/share/nginx/html
+
+  service4:
+    image: project2-nginx
+    ports:
+      - "8084:80"
+    volumes:
+      - ./site4:/usr/share/nginx/html
+
+  service5:
+    image: project2-nginx
+    ports:
+      - "8085:80"
+    volumes:
+      - ./site5:/usr/share/nginx/html

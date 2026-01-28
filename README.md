@@ -15,6 +15,9 @@ Implementation:
 - Five unique services using the same image
 
 Instructions:
-1. Build image: `docker build -t project2-nginx .`
+1. Build image:
+```bash
+docker build -t project2-nginx .
+```
 2. Start services: `docker compose up -d`
 3. Access services via EC2 IP and ports 8081–8085

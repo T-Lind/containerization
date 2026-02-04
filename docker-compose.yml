@@ -2,13 +2,13 @@ version: "3.8"
 
 services:
 
-  # PART E — 5 IDENTICAL CONTAINERS
+  # identical containers
   identical:
     image: project2-nginx
     deploy:
       replicas: 5
 
-  # PART F — 5 UNIQUE CONTAINERS
+  # unique containers
   service1:
     image: project2-nginx
     ports:
